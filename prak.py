@@ -16,4 +16,7 @@ root.title("Aplikasi prediksi Prodi Pilihan")
 root.geometry("400x800")
 root.configure(bg="#5B0EB5")
 
+lbl = tk.Label(root, text="Aplikasi prediksi Prodi Pilihan",bg="#5B0EB5",foreground="white", font=("Arial", 14, "bold"))
+
+lbl.pack(pady=20)
 root.mainloop()
