@@ -1,28 +1,22 @@
-'''
-•Buatlah GUI dengan Tkinter yang berisi:
-   -1 label judul Aplikasi prediksi Prodi Pilihan
-   -10 input nilai mata pelajaran
-   -1 button bertuliskan Hasil Prediksi
-   -1 label luaran hasil prediksi
-•Atur posisi GUI sebaik mungkin!
-•Fungsi Hasil Prediksi menuliskan prodi TeknologiInformasi apapun input yang diberikan!
-'''
-
-
 import tkinter as tk
+
+# Fungsi untuk menampilkan hasil prediksi di window lain (Toplevel)
 
 root = tk.Tk()
 root.title("Aplikasi prediksi Prodi Pilihan")
-root.geometry("400x800")
+root.geometry("450x850")
 root.configure(bg="#5B0EB5")
 
-lbl = tk.Label(root, text="Aplikasi prediksi Prodi Pilihan",bg="#5B0EB5",foreground="white", font=("Arial", 14, "bold"))
-lbl.grid(row=0, column=0, columnspan=2, pady=15)
+# Agar frame di dalam root berada di tengah secara vertikal dan horizontal
+root.grid_rowconfigure(0, weight=1)
+root.grid_columnconfigure(0, weight=1)
 
-label_nama = tk.Label(root, text="Matematika Wajib:", fg="white", bg="#5B0EB5", font=("Arial", 14, "bold"))
-label_nama.grid(row=1, column=0, sticky="w", padx=10, pady=5)
-entry_nama = tk.Entry(root, width=30)
-entry_nama.grid(row=1, column=1, padx=10, pady=5)
+# Frame utama sebagai wadah agar tetap di tengah saat di-resize
+main_frame = tk.Frame(root, bg="#5B0EB5")
+main_frame.grid(row=0, column=0)
 
+# 1 Label Judul
+lbl = tk.Label(main_frame, text="Aplikasi prediksi Prodi Pilihan", bg="#5B0EB5", fg="white", font=("Arial", 14, "bold"))
+lbl.grid(row=0, column=0, columnspan=2, pady=(0, 15))
 
 root.mainloop()
