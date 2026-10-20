@@ -13,3 +13,7 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("Aplikasi prediksi Prodi Pilihan")
+root.geometry("400x800")
+root.configure(bg="#5B0EB5")
+
+root.mainloop()
