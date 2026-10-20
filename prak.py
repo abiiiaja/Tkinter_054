@@ -53,4 +53,7 @@ for i in range(1, 11):
     entry_mapel.grid(row=i, column=1, sticky="w", padx=10, pady=5)
     entry_list.append(entry_mapel)
 
+btn_hasil = tk.Button(main_frame, text="Hasil Prediksi", command=hasil_prediksi, bg="white", fg="#5B0EB5", font=("Arial", 10, "bold"))
+btn_hasil.grid(row=11, column=0, columnspan=2, pady=15)
+
 root.mainloop()
