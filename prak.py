@@ -33,7 +33,6 @@ root.geometry("450x850")
 root.configure(bg="#5B0EB5")
 
 # Agar frame di dalam root berada di tengah secara vertikal dan horizontal
-root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
 
 # Frame utama sebagai wadah agar tetap di tengah saat di-resize
