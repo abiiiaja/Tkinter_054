@@ -1,6 +1,31 @@
 import tkinter as tk
 
 # Fungsi untuk menampilkan hasil prediksi di window lain (Toplevel)
+def hasil_prediksi():
+    # Membuat window baru (popup)
+    top = tk.Toplevel(root)
+    top.title("Hasil Prediksi")
+    top.geometry("320x200")
+    top.configure(bg="#5B0EB5")
+   
+    # Mengatur agar window baru fokus di atas window utama
+    top.transient(root)
+    top.grab_set()
+   
+    # Label keterangan di window baru
+    lbl_info = tk.Label(top, text="Prodi Prediksi Anda:", fg="white", bg="#5B0EB5", font=("Arial", 11))
+    lbl_info.pack(pady=(25, 5))
+   
+    # Label hasil (selalu Teknologi Informasi apapun inputnya)
+    lbl_hasil_value = tk.Label(top, text="Teknologi Informasi", fg="#00FFC8", bg="#5B0EB5", font=("Arial", 14, "bold"))
+    lbl_hasil_value.pack(pady=5)
+   
+    # Tombol untuk menutup window hasil
+    btn_tutup = tk.Button(top, text="Tutup", command=top.destroy, bg="white", fg="#5B0EB5", font=("Arial", 10, "bold"), padx=10)
+    btn_tutup.pack(pady=15)
+
+
+
 
 root = tk.Tk()
 root.title("Aplikasi prediksi Prodi Pilihan")
